@@ -130,7 +130,7 @@
 						loading.style.display = "none";
 						button.className = "button";
 					}
-				
+				}); // ← ВОТ ЭТУ СКОБКУ БЫЛО НЕ ХВАТАЛО!
 			}
 			
 			function PressToEnter(e) {
