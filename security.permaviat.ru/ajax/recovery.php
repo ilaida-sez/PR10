@@ -4,6 +4,12 @@
 	
 	$login = $_POST['login'];
 	
+	// Проверяем капчу
+	if(empty($_POST['g-recaptcha-response'])) {
+		echo "-1";
+		exit;
+	}
+	
 	// ищем пользователя
 	$query_user = $mysqli->query("SELECT * FROM `users` WHERE `login`='".$login."';");
 	
